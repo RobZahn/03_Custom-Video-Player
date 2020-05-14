@@ -15,7 +15,11 @@ function toggleVideoStatus() {
 
 // Update play/pause icon
 function updatePlayIcon() {
-  return true;
+  if (video.paused) {
+    play.innerHTML = '<i class="fas fa-play fa-2x"></i>';
+  } else {
+    play.innerHTML = '<i class="fas fa-pause fa-2x"></i>';
+  }
 }
 
 // Update progress & timestamp
